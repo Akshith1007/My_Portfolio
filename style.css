@@ -1,0 +1,119 @@
+/* -----------------------------
+   Basic reset & variables
+   ----------------------------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root{
+  --bg: #0f172a;
+  --panel: #0b1220;
+  --muted: #9ca3af;
+  --text: #e5e7eb;
+  --accent: #38bdf8;
+  --radius: 10px;
+  --container-max: 1100px;
+}
+html,body { height: 100%; }
+body{
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+  line-height: 1.5;
+}
+
+/* -----------------------------
+   Layout helpers
+   ----------------------------- */
+.container{
+  width: 95%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* Header */
+.header{
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(11,17,32,0.88);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.header-inner{ display:flex; align-items:center; justify-content:space-between; padding:12px 0; }
+
+/* Logo & nav */
+.logo{ color:var(--accent); font-weight:700; font-size:1.05rem; }
+.nav ul{ list-style:none; display:flex; gap:1rem; align-items:center; }
+.nav-link{ color:var(--muted); text-decoration:none; font-size:0.95rem; padding:6px 4px; }
+.nav-link.active{ color:var(--accent); }
+
+/* Mobile menu toggle */
+.menu-toggle{ display:none; background:transparent; border:0; color:var(--text); font-size:1.2rem; cursor:pointer; }
+
+/* -----------------------------
+   Hero
+   ----------------------------- */
+.hero{ padding:46px 0; }
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1fr 300px;
+  gap:32px;
+  align-items:center;
+}
+.hero-content h1{ font-size:2rem; margin-bottom:6px; }
+.accent{ color:var(--accent); }
+.subheading{ font-size:1.02rem; color:var(--muted); margin-bottom:14px; }
+.lead{ color:#d1d5db; margin-bottom:14px; }
+
+/* Buttons */
+.cta-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+.btn{
+  display:inline-block; padding:10px 14px; border-radius:999px; text-decoration:none; font-weight:600; font-size:0.95rem;
+  background:transparent; color:var(--text); border:1px solid rgba(255,255,255,0.04);
+}
+.btn.primary{ background:var(--accent); color:#071325; border:0; }
+.btn.outline{ color:var(--accent); border:1px solid rgba(56,189,248,0.18); }
+
+/* Photo */
+.hero-photo-wrap{ display:flex; align-items:center; justify-content:center; }
+.profile-photo{
+  width:220px; height:220px; object-fit:cover; border-radius:14px;
+  border:4px solid rgba(255,255,255,0.04); box-shadow:0 10px 30px rgba(2,6,23,0.6);
+}
+
+/* -----------------------------
+   Sections & cards
+   ----------------------------- */
+.section{ padding:36px 0; }
+.section-title{ font-size:1.15rem; margin-bottom:12px; color:var(--text); border-left:4px solid var(--accent); padding-left:10px; }
+.skills-grid, .projects-grid{
+  display:grid; gap:14px; margin-top:14px;
+}
+.card, .project-card{
+  background:var(--panel); padding:14px; border-radius:var(--radius); border:1px solid rgba(255,255,255,0.03);
+}
+.skills-grid{ grid-template-columns: repeat(3, 1fr); }
+.projects-grid{ grid-template-columns: repeat(3, 1fr); }
+.project-card h4{ margin-bottom:6px; }
+.meta{ font-size:0.85rem; color:#93c5fd; margin-top:8px; }
+
+/* Contact */
+.contact-list a{ color:var(--accent); text-decoration:none; }
+.contact-list a:hover{ text-decoration:underline; }
+
+/* Footer */
+.footer{ text-align:center; padding:18px 10px; color:var(--muted); border-top:1px solid rgba(255,255,255,0.03); margin-top:30px; }
+
+/* -----------------------------
+   Responsive
+   ----------------------------- */
+@media (max-width: 900px){
+  .hero-grid{ grid-template-columns: 1fr; }
+  .profile-photo{ width:160px; height:160px; }
+  .skills-grid{ grid-template-columns: repeat(2,1fr); }
+  .projects-grid{ grid-template-columns: repeat(1,1fr); }
+  .nav{ display:none; position:absolute; right:0; top:64px; background:var(--panel); width:100%; padding:14px; }
+  .menu-toggle{ display:block; }
+}
+
+@media (max-width: 480px){
+  .profile-photo{ width:140px; height:140px; }
+  .skills-grid{ grid-template-columns: 1fr; }
+  .cta-row{ flex-direction:column; align-items:flex-start; gap:8px; }
+}

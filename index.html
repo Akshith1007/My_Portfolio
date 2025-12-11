@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Akshith Raj — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">Akshith Raj</div>
+
+      <nav class="nav" aria-label="Main Navigation">
+        <ul>
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <!-- HERO -->
+    <section id="home" class="hero container" aria-labelledby="hero-heading">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1 id="hero-heading">Hi — I'm <span class="accent">Akshith Raj Kodam</span></h1>
+          <h2 class="subheading">B.Tech CSE (IoT) • Aspiring Software Engineer</h2>
+          <p class="lead">
+            I build practical software and ML projects using Python and Java. I focus on clean, maintainable code and learning by building.
+            Currently seeking internships or entry-level roles in software development.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn" href="#contact">Contact</a>
+            <a class="btn outline" href="assets/AkshithRaj_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap" aria-hidden="false">
+          <!-- Replace this with your professional headshot at assets/profile.jpg -->
+          <img src="assets/profile.jpg" alt="Professional portrait of Akshith Raj Kodam" class="profile-photo" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h3 class="section-title">About</h3>
+      <p>
+        I'm a motivated B.Tech CSE (IoT) graduate from Malla Reddy College of Engineering & Technology.
+        I enjoy designing and implementing software solutions — from small scripts to full-stack apps and ML models.
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section container">
+      <h3 class="section-title">Skills</h3>
+      <div class="skills-grid">
+        <div class="card">
+          <h4>Programming</h4>
+          <ul><li>Python</li><li>Java</li><li>C</li></ul>
+        </div>
+        <div class="card">
+          <h4>Web</h4>
+          <ul><li>HTML & CSS</li><li>JavaScript</li><li>REST APIs</li></ul>
+        </div>
+        <div class="card">
+          <h4>Databases</h4>
+          <ul><li>MySQL</li><li>PL/SQL</li></ul>
+        </div>
+        <div class="card">
+          <h4>Tools</h4>
+          <ul><li>Git & GitHub</li><li>VS Code, Eclipse</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section container">
+      <h3 class="section-title">Projects</h3>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h4>AI-powered Resume Screening</h4>
+          <p>Ranked and screened resumes with an ML model; built with Python and deployed using Streamlit.</p>
+          <p class="meta">Python • scikit-learn • Streamlit</p>
+        </article>
+
+        <article class="project-card">
+          <h4>Plant Leaf Disease Detection</h4>
+          <p>CNN model to classify leaf diseases; included preprocessing and augmentation to improve accuracy.</p>
+          <p class="meta">TensorFlow • CNN • Image Processing</p>
+        </article>
+
+        <article class="project-card">
+          <h4>Student Data Management</h4>
+          <p>Java Swing desktop app with CRUD operations connected to MySQL for student records management.</p>
+          <p class="meta">Java • Swing • MySQL</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section container">
+      <h3 class="section-title">Education</h3>
+      <div class="card">
+        <h4>B.Tech — Computer Science & Engineering (IoT)</h4>
+        <p><strong>College:</strong> Malla Reddy College of Engineering & Technology</p>
+        <p><strong>Graduation:</strong> 2025 • <strong>CGPA:</strong> 7.37</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <h3 class="section-title">Contact</h3>
+      <p class="lead">Open to internships and entry-level roles. Reach out via email or LinkedIn.</p>
+
+      <div class="contact-list">
+        <p><strong>Email:</strong> <a href="mailto:akshithraj1007@gmail.com">akshithraj1007@gmail.com</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+919701312757">+91 97013 12757</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/akshith-raj-kodam-2851a22aa/" target="_blank" rel="noopener">linkedin.com/in/akshith-raj-kodam</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/Akshith1007" target="_blank" rel="noopener">github.com/Akshith1007</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Akshith Raj Kodam — All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
